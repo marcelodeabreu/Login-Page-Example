@@ -13,7 +13,7 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.screen?.delegate(delegate: self)
         self.screen?.configureTextFieldDelegate(delegate: self)
     }
 
@@ -21,6 +21,18 @@ class LoginVC: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
+}
+
+extension LoginVC: LoginScreenProtocol {
+    func actionLoginButton() {
+        print("xxx")
+    }
+    
+    func actionRegisterButton() {
+        print("yyy")
+    }
+    
+    
 }
 
 extension LoginVC: UITextFieldDelegate {

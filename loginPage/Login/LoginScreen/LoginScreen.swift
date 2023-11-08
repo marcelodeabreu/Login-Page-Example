@@ -2,7 +2,18 @@
 
 import UIKit
 
+protocol LoginScreenProtocol: AnyObject {
+    func actionLoginButton()
+    func actionRegisterButton()
+}
+
 class LoginScreen: UIView {
+    
+   private weak var delegate: LoginScreenProtocol?
+    
+    func delegate(delegate:LoginScreenProtocol?){
+        self.delegate = delegate
+    }
     
     lazy var logoAppImageView: UIImageView = {
        
@@ -77,6 +88,7 @@ class LoginScreen: UIView {
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 180/255, alpha: 1.0)
+        button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         
         return button
     }()
@@ -87,11 +99,10 @@ class LoginScreen: UIView {
         button.setTitle("Create account", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.systemBlue, for: .normal)
-        
+        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
+
         return button
     }()
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -118,6 +129,13 @@ class LoginScreen: UIView {
         self.passwordTextField.delegate = delegate
     }
     
+    @objc private func tappedLoginButton(){
+        self.delegate?.actionLoginButton()
+    }
+    
+    @objc private func tappedRegisterButton(){
+        self.delegate?.actionRegisterButton()
+    }
     
     required init?(coder: NSCoder) {
         fatalError()
