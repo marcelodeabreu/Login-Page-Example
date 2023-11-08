@@ -113,6 +113,10 @@ class LoginScreen: UIView {
         self.addSubview(self.registerButton)
     }
     
+    public func configureTextFieldDelegate(delegate: UITextFieldDelegate) {
+        self.emailTextField.delegate = delegate
+        self.passwordTextField.delegate = delegate
+    }
     
     
     required init?(coder: NSCoder) {
