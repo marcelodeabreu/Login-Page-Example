@@ -1,19 +1,21 @@
-//  Created by Marcelo de Abreu on 02/11/23.
+//
+//  RegisterScreen.swift
+//  loginPage
+//
+//  Created by Marcelo de Abreu on 10/11/23.
+//
 
 import UIKit
 
-protocol LoginScreenProtocol: AnyObject {
-    func actionLoginButton()
-    func actionRegisterButton()
-}
-
-class LoginScreen: UIView {
+class RegisterScreen: UIView {
     
-   private weak var delegate: LoginScreenProtocol?
-    
-    func delegate(delegate:LoginScreenProtocol?){
-        self.delegate = delegate
-    }
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(systemName: "arrowshape.backward"), for: .normal)
+        
+        return button
+    }()
     
     lazy var logoAppImageView: UIImageView = {
        
@@ -23,17 +25,6 @@ class LoginScreen: UIView {
         image.contentMode = .scaleAspectFit
         
         return image
-    }()
-    
-    lazy var loginLabel: UILabel = {
-        
-       let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 52/255, green: 52/255, blue: 180/255, alpha: 1.0)
-        label.font = .boldSystemFont(ofSize: 25)
-        label.text = "welcome:"
-        
-        return label
     }()
     
     lazy var emailTextField: UITextField = {
@@ -67,7 +58,7 @@ class LoginScreen: UIView {
             ptf.keyboardType = .default
             ptf.isSecureTextEntry = true
             ptf.attributedPlaceholder = NSAttributedString(
-                string: "********",
+                string: "choose password",
                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.4)]
             )
             ptf.textColor = .white
@@ -79,81 +70,76 @@ class LoginScreen: UIView {
             return ptf
         }()
     
-    lazy var loginButton: UIButton = {
+    lazy var reEnterPasswordTextField: UITextField = {
+            
+            let ptf = UITextField()
+            ptf.translatesAutoresizingMaskIntoConstraints = false
+            ptf.autocorrectionType = .no
+            ptf.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 180/255, alpha: 1.0)
+            ptf.borderStyle = .roundedRect
+            ptf.keyboardType = .default
+            ptf.isSecureTextEntry = true
+            ptf.attributedPlaceholder = NSAttributedString(
+                string: "re-enter password",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.4)]
+            )
+            ptf.textColor = .white
+            ptf.clipsToBounds = true
+            ptf.layer.cornerRadius = 12
+            ptf.layer.borderWidth = 1.0
+            ptf.layer.borderColor = UIColor.white.cgColor
+            
+            return ptf
+        }()
+    
+    lazy var createAccountButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Create Account", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
         button.setTitleColor(.white, for: .normal)
         button.clipsToBounds = true
         button.layer.cornerRadius = 7.5
         button.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 180/255, alpha: 1.0)
-        button.addTarget(self, action: #selector(self.tappedLoginButton), for: .touchUpInside)
         
         return button
     }()
     
-    lazy var registerButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Create account", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18)
-        button.setTitleColor(.systemBlue, for: .normal)
-        button.addTarget(self, action: #selector(self.tappedRegisterButton), for: .touchUpInside)
-
-        return button
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.configureBackground()
         self.configureSuperView()
-        self.configConstraints()
-    }
-    
-    private func configureBackground(){
-        self.backgroundColor = .systemBackground
+        self.setUpConstraints()
     }
     
     private func configureSuperView() {
+        self.addSubview(self.backButton)
         self.addSubview(self.logoAppImageView)
-        self.addSubview(self.loginLabel)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
-        self.addSubview(self.loginButton)
-        self.addSubview(self.registerButton)
+        self.addSubview(self.reEnterPasswordTextField)
+        self.addSubview(self.createAccountButton)
     }
     
-    public func configureTextFieldDelegate(delegate: UITextFieldDelegate) {
-        self.emailTextField.delegate = delegate
-        self.passwordTextField.delegate = delegate
-    }
-    
-    @objc private func tappedLoginButton(){
-        self.delegate?.actionLoginButton()
-    }
-    
-    @objc private func tappedRegisterButton(){
-        self.delegate?.actionRegisterButton()
+    private func configureBackground() {
+        self.backgroundColor = .systemBackground
     }
     
     required init?(coder: NSCoder) {
         fatalError("Error.")
     }
     
-// CONSTRAINS CONFIGURATION
-    
-    private func configConstraints() {
+    private func setUpConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
             self.logoAppImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
+            self.backButton.topAnchor.constraint(equalTo: self.logoAppImageView.topAnchor),
+            self.backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
-            self.loginLabel.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 80),
-            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            
-            self.emailTextField.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 80),
+            self.emailTextField.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 80),
             self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
             self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
             
@@ -161,16 +147,19 @@ class LoginScreen: UIView {
             self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
             self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             
+            self.reEnterPasswordTextField.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+            self.reEnterPasswordTextField.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
+            self.reEnterPasswordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
             
-            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 60),
-            self.loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
-            self.loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65),
-            
-            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 60),
-            self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
-            self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65)
-            
-            
+            self.createAccountButton.topAnchor.constraint(equalTo: self.reEnterPasswordTextField.bottomAnchor, constant: 60),
+            self.createAccountButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
+            self.createAccountButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65)
+        
+        
+        
+        
         ])
+        
     }
+    
 }
