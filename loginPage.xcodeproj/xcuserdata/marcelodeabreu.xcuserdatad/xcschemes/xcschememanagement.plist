@@ -7,7 +7,11 @@
 		<key>loginPage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>0</integer>
+=======
+			<integer>15</integer>
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 		</dict>
 	</dict>
 </dict>

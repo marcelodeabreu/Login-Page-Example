@@ -6,6 +6,11 @@
 //
 
 import UIKit
+<<<<<<< HEAD
+=======
+import SnapKit
+import Firebase
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+<<<<<<< HEAD
+=======
+        FirebaseApp.configure()
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
         return true
     }
 

@@ -108,7 +108,24 @@ class LoginScreen: UIView {
         super.init(frame: frame)
         self.configureBackground()
         self.configureSuperView()
+<<<<<<< HEAD
         self.configConstraints()
+=======
+        
+        // XXXXXXXXXXXXXXXXX
+        
+        self.configureLogoAppImageViewConstraint()
+        self.configureLoginLabelConstraint()
+        self.configureEmailTextFieldConstraint()
+        self.configurePasswordTextFieldConstraint()
+        self.configureLoginButtonConstraint()
+        self.configureRegisterButtonConstraint()
+        
+        // XXXXXXXXXXXXXXXXX
+        
+        self.configConstraints()
+        self.configureButtonEnable(false)
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
     }
     
     private func configureBackground(){
@@ -137,6 +154,41 @@ class LoginScreen: UIView {
         self.delegate?.actionRegisterButton()
     }
     
+<<<<<<< HEAD
+=======
+    public func validateTextFields() {
+        
+        let email: String = self.emailTextField.text ?? ""
+        let password: String = self.passwordTextField.text ?? ""
+        
+        if !email.isEmpty && !password.isEmpty {
+            self.configureButtonEnable(true)
+        } else {
+            self.configureButtonEnable(false)
+        }
+        
+    }
+    
+    private func configureButtonEnable (_ enable: Bool) {
+        
+        if enable {
+            self.loginButton.setTitleColor(.white, for: .normal)
+            self.loginButton.isEnabled = true
+        } else {
+            self.loginButton.setTitleColor(.lightGray, for: .normal)
+            self.loginButton.isEnabled = false
+        }
+    }
+    
+    public func getEmail()-> String {
+        return self.emailTextField.text ?? ""
+    }
+    
+    public func getPassword()-> String {
+        return self.passwordTextField.text ?? ""
+    }
+    
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
     required init?(coder: NSCoder) {
         fatalError("Error.")
     }
@@ -146,6 +198,7 @@ class LoginScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
         
+<<<<<<< HEAD
             self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
             self.logoAppImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
@@ -169,8 +222,82 @@ class LoginScreen: UIView {
             self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 60),
             self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
             self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65)
+=======
+//            self.logoAppImageView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 30),
+//            self.logoAppImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            
+//            self.loginLabel.topAnchor.constraint(equalTo: self.logoAppImageView.bottomAnchor, constant: 80),
+//            self.loginLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+//            self.emailTextField.topAnchor.constraint(equalTo: self.loginLabel.bottomAnchor, constant: 80),
+//            self.emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 30),
+//            self.emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -30),
+            
+//            self.passwordTextField.topAnchor.constraint(equalTo: self.emailTextField.bottomAnchor, constant: 20),
+//            self.passwordTextField.leadingAnchor.constraint(equalTo: self.emailTextField.leadingAnchor),
+//            self.passwordTextField.trailingAnchor.constraint(equalTo: self.emailTextField.trailingAnchor),
+            
+            
+//            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 60),
+//            self.loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
+//            self.loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65),
+            
+//            self.registerButton.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 60),
+//            self.registerButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 65),
+//            self.registerButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -65)
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
             
             
         ])
     }
+<<<<<<< HEAD
+=======
+    
+    func configureLogoAppImageViewConstraint(){
+        self.logoAppImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(50)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configureLoginLabelConstraint() {
+        self.loginLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.logoAppImageView.snp.bottom).offset(80)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configureEmailTextFieldConstraint() {
+        self.emailTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(self.loginLabel.snp.bottom).offset(80)
+            make.width.equalTo(300)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configurePasswordTextFieldConstraint() {
+        self.passwordTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(self.emailTextField.snp.bottom).offset(20)
+            make.width.equalTo(300)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configureLoginButtonConstraint() {
+        self.loginButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.passwordTextField.snp.bottom).offset(60)
+            make.width.equalTo(200)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    func configureRegisterButtonConstraint() {
+        self.registerButton.snp.makeConstraints { (make) in
+            make.top.equalTo(self.loginButton.snp.bottom).offset(60)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 }

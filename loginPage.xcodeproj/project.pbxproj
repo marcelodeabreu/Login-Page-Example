@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
+=======
+		6474F6892B0EC461001BA974 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6474F6882B0EC461001BA974 /* GoogleService-Info.plist */; };
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 		64AD6C962AFEA91B00014165 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD6C952AFEA91B00014165 /* RegisterVC.swift */; };
 		64AD6C982AFEACD800014165 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AD6C972AFEACD800014165 /* RegisterScreen.swift */; };
 		64C6DF3D2AF34509001FFF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6DF3C2AF34509001FFF40 /* AppDelegate.swift */; };
@@ -15,9 +19,19 @@
 		64C6DF462AF3450B001FFF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C6DF452AF3450B001FFF40 /* Assets.xcassets */; };
 		64C6DF492AF3450B001FFF40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C6DF472AF3450B001FFF40 /* LaunchScreen.storyboard */; };
 		64C6DF512AF3484C001FFF40 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6DF502AF3484C001FFF40 /* LoginScreen.swift */; };
+<<<<<<< HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+=======
+		83E7EAFA416736DF30712108 /* Pods_loginPage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149F049B9B739A3C3A2E9961 /* Pods_loginPage.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08DC3AFD77095F57E3FF30B3 /* Pods-loginPage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginPage.debug.xcconfig"; path = "Target Support Files/Pods-loginPage/Pods-loginPage.debug.xcconfig"; sourceTree = "<group>"; };
+		149F049B9B739A3C3A2E9961 /* Pods_loginPage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_loginPage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6474F6882B0EC461001BA974 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 		64AD6C952AFEA91B00014165 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		64AD6C972AFEACD800014165 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		64C6DF392AF34509001FFF40 /* loginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,6 +42,10 @@
 		64C6DF482AF3450B001FFF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64C6DF4A2AF3450B001FFF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64C6DF502AF3484C001FFF40 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
+=======
+		A7868A6A9D3CD76E8F116E2F /* Pods-loginPage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loginPage.release.xcconfig"; path = "Target Support Files/Pods-loginPage/Pods-loginPage.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +53,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
+=======
+				83E7EAFA416736DF30712108 /* Pods_loginPage.framework in Frameworks */,
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +118,11 @@
 			children = (
 				64C6DF3B2AF34509001FFF40 /* loginPage */,
 				64C6DF3A2AF34509001FFF40 /* Products */,
+<<<<<<< HEAD
+=======
+				9513B296576FF0BA9CA1BE75 /* Pods */,
+				C12BB34B0B6854EA7770B62B /* Frameworks */,
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			);
 			sourceTree = "<group>";
 		};
@@ -117,10 +144,34 @@
 				64C6DF452AF3450B001FFF40 /* Assets.xcassets */,
 				64C6DF472AF3450B001FFF40 /* LaunchScreen.storyboard */,
 				64C6DF4A2AF3450B001FFF40 /* Info.plist */,
+<<<<<<< HEAD
+=======
+				6474F6882B0EC461001BA974 /* GoogleService-Info.plist */,
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			);
 			path = loginPage;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
+=======
+		9513B296576FF0BA9CA1BE75 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08DC3AFD77095F57E3FF30B3 /* Pods-loginPage.debug.xcconfig */,
+				A7868A6A9D3CD76E8F116E2F /* Pods-loginPage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C12BB34B0B6854EA7770B62B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				149F049B9B739A3C3A2E9961 /* Pods_loginPage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +179,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64C6DF4D2AF3450B001FFF40 /* Build configuration list for PBXNativeTarget "loginPage" */;
 			buildPhases = (
+<<<<<<< HEAD
 				64C6DF352AF34509001FFF40 /* Sources */,
 				64C6DF362AF34509001FFF40 /* Frameworks */,
 				64C6DF372AF34509001FFF40 /* Resources */,
+=======
+				C18F6D63ED590903831ABC37 /* [CP] Check Pods Manifest.lock */,
+				64C6DF352AF34509001FFF40 /* Sources */,
+				64C6DF362AF34509001FFF40 /* Frameworks */,
+				64C6DF372AF34509001FFF40 /* Resources */,
+				06FFFBD64012B98A6218C5DF /* [CP] Embed Pods Frameworks */,
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			);
 			buildRules = (
 			);
@@ -181,11 +240,60 @@
 			files = (
 				64C6DF492AF3450B001FFF40 /* LaunchScreen.storyboard in Resources */,
 				64C6DF462AF3450B001FFF40 /* Assets.xcassets in Resources */,
+<<<<<<< HEAD
+=======
+				6474F6892B0EC461001BA974 /* GoogleService-Info.plist in Resources */,
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+<<<<<<< HEAD
+=======
+/* Begin PBXShellScriptBuildPhase section */
+		06FFFBD64012B98A6218C5DF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginPage/Pods-loginPage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginPage/Pods-loginPage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loginPage/Pods-loginPage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C18F6D63ED590903831ABC37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-loginPage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 /* Begin PBXSourcesBuildPhase section */
 		64C6DF352AF34509001FFF40 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -251,7 +359,11 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+<<<<<<< HEAD
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+=======
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -314,7 +426,11 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+<<<<<<< HEAD
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+=======
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -335,6 +451,10 @@
 		};
 		64C6DF4E2AF3450B001FFF40 /* Debug */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
+=======
+			baseConfigurationReference = 08DC3AFD77095F57E3FF30B3 /* Pods-loginPage.debug.xcconfig */;
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +481,10 @@
 		};
 		64C6DF4F2AF3450B001FFF40 /* Release */ = {
 			isa = XCBuildConfiguration;
+<<<<<<< HEAD
+=======
+			baseConfigurationReference = A7868A6A9D3CD76E8F116E2F /* Pods-loginPage.release.xcconfig */;
+>>>>>>> cb80e59 (Adding podfiles and snapkit)
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
